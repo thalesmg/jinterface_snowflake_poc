@@ -1,0 +1,31 @@
+** Compiling OTP with Jinterface
+
+#+BEGIN_SRC sh
+  export ERL_TOP=$PWD; export PATH=$ERL_TOP/bin:$PATH
+  ./configure --with-javac
+  make
+  # cp lib/jinterface/priv/OtpErlang.jar this/repo/root/
+#+END_SRC
+
+** Running
+
+#+BEGIN_SRC sql
+  create database TESTDATABASE;
+  create table TESTTABLE(c1 number);
+#+END_SRC
+
+#+BEGIN_SRC sh
+  clj -M -m emqx.core
+
+  clj -M -m emqx.core --emqx-node emqx@127.0.0.1 --mailbox-name some_name --node-name jemqx@127.0.0.1
+#+END_SRC
+
+#+BEGIN_SRC elixir
+  send({:streamer, :"jemqx@127.0.0.1"}, %{"c1" => 123})
+#+END_SRC
+
+** Formatting
+
+#+BEGIN_SRC sh
+  cljfmt fix .
+#+END_SRC

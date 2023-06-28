@@ -1,0 +1,13 @@
+{:deps {
+        ;; https://mvnrepository.com/artifact/org.erlang.otp/jinterface
+        ;; too outdated........
+        ;; org.erlang.otp/jinterface {:mvn/version "1.6.1"}
+        org.erlang.otp/jinterface {:local/root
+                                   "../otp/lib/jinterface/priv/OtpErlang.jar"}
+
+        ;; https://mvnrepository.com/artifact/net.snowflake/snowflake-ingest-sdk
+        net.snowflake/snowflake-ingest-sdk {:mvn/version "2.0.1"}
+
+        org.clojure/tools.cli {:mvn/version "1.0.219"}
+        cheshire/cheshire {:mvn/version "5.11.0"}
+        }}
