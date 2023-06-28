@@ -9,7 +9,8 @@
    [net.snowflake.ingest.streaming
     SnowflakeStreamingIngestClientFactory
     OpenChannelRequest
-    OpenChannelRequest$OnErrorOption]))
+    OpenChannelRequest$OnErrorOption])
+  (:gen-class))
 
 (defn eprintln
   [& args]

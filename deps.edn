@@ -10,4 +10,7 @@
 
         org.clojure/tools.cli {:mvn/version "1.0.219"}
         cheshire/cheshire {:mvn/version "5.11.0"}
-        }}
+        }
+ :aliases
+ {:build {:deps {io.github.clojure/tools.build {:mvn/version "0.9.4"}}
+          :ns-default build}}}

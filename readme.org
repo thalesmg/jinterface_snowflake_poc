@@ -24,6 +24,13 @@
   send({:streamer, :"jemqx@127.0.0.1"}, %{"c1" => 123})
 #+END_SRC
 
+** Uber jar
+
+#+BEGIN_SRC sh
+  clj -T:build uber
+  java -jar target/emqx-snowflake-0.0.0-standalone.jar --node-name jemqx2@127.0.0.1
+#+END_SRC
+
 ** Formatting
 
 #+BEGIN_SRC sh
